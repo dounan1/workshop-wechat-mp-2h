@@ -1,0 +1,163 @@
+---
+title: Le Wagon WeChat development workshop
+---
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+  <div class="banner-content slideUp">
+    <h1>WeChat development <br>crash course</h1>
+    <p>Learn how to build a Mini Program with Le Wagon</p>
+    <p class="tossing"><img src="images/QRCodeLeWagon.gif" width="150" height="150" /></p>
+    <p><b>Follow our account</b></p>
+  </div>
+</div>
+
+<div class="container-fluid readme">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <section class="readme-section">
+        <h2 class="readme-header">0. Welcome aboard!</h2>
+
+        <p class="text-center">
+        <img src='images/goal.png'/>
+        </p>
+
+      </section>
+      <section class="readme-section">
+        <h2 class="readme-header">1. Let's set up</h2>
+        <ol>
+          <li>Open and bookmark the <a href="https://mp.weixin.qq.com/">WeChat Official Accounts Platform</a></li>
+          <li>Download the <strong>Integrated Development Environment</strong> (IDE) for WeChat: <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">click here and choose it for Windows or Mac (Linux not available)</a></li>
+          <li>Install the IDE on your computer</li>
+          <li>Open the IDE to setup your first project
+            <ul>
+              <li>On the home screen, scan the QR code with your personal WeChat. You should read "Scan succesfully". On your mobile, authorize the login. You're in!</li>
+              <li>Choose the left menu (purple block) <strong>"Mini Program Project"</strong></li>
+              <li>Click the <strong>+ button</strong> on the bottom right of the window to add a new project
+                <ol>
+                <li>Select a directory where the Mini Program code will be stored on your computer. (Suggestion: make a new folder on your <strong>Desktop</strong>)</li>
+                <li>In the AppID field, you're supposed to input your registered AppID. Don't worry, you can use a "test account" by clicking on the blue link "Mini Program" just below the field. </li>
+                <li>Select a name for this project (for your usage only, it won't show to users).</li>
+                <li>If your project directory was empty, the WeChat IDE will provide you a "quick start template" with basic code. The option is selected by default. It is suggested to begin with this option activated.</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <p class="text-center">
+        <img src='images/project-setup.jpeg'/>
+        </p>
+
+      </section>
+
+      <section class="readme-section">
+        <h2 class="readme-header">2. Add some content and WXML markup</h2>
+        <ul>
+          <li>
+            To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "img" folder)
+            <ul class="list-inline features">
+              <li><img src="images/kungfupanda.jpg" alt=""></li>
+            </ul>
+          </li>
+          <li>Then start writing some WXML code in <code>index.wxml</code>. We want:
+
+            <ol>
+              <li>One <code>image</code> tag</li>
+              <li>Two <code>text</code> tags</li>
+              <li>One <code>button</code> tag</li>
+            </ol>
+
+          </li>
+          <li>Have a little doubt here? no worries, always refer to the <a href="https://developers.weixin.qq.com/miniprogram/en/dev/component/index.html?t=18090718">Official Documentation!</a></li>
+          <li>Your code will look like this:</li>
+        </ul>
+
+<% code("html") do %>
+
+  <image src="/img/kungfupanda.jpg"/>
+  <text>Get new superpowers</text>
+  <text>Learn to code!</text>
+  <button type="default">Start today</button>
+
+<% end %>
+        <h3>Tips</h3>
+        <ul>
+          <li>Use the built-in <strong>auto complete</strong> function to make sure you don't forget any <strong>end tags</strong></li>
+          <li>Your image <code>src</code> allows to load the file from the current page (index.wxml), you want to start with a slash <code>/</code> to write an absolute path</li>
+          <li>Don't forget to place your images inside a folder, e.g <code>/img</code></li>
+          <li>the <code>text</code> tag is "inline", i.e each tag will be side by side. If you want to break on two or multiple lines, consider using <code>view</code> tags instead</li>
+        </ul>
+      </section>
+
+      <section class="readme-section">
+        <h2 class="readme-header">3. CSS for fonts & colors</h2>
+        <ul>
+          <li>First, transform your image tag into a background banner</li>
+          <li>Second, add <strong>CSS classes</strong> in your <code>index.wxml</code>. Your code will look like this:
+        </ul>
+
+<% code("html") do %>
+<view class="banner">
+  <view class="title">Get new superpowers</view>
+  <view class="proposition">Learn to code!</view>
+  <button type="default">Start today</button>
+</view>
+<% end %>
+
+
+        <p>Then copy/paste the CSS code below in <code>index.wxss</code> and <strong>customize it</strong></p>
+
+<% code("css") do %>
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('https://cloud-minapp-13908.cloud.ifanrusercontent.com/1fxsJQzleumTqmCq.jpg');
+  background-position: center -30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding:30px;
+}
+.title {
+  margin-top: 100px;
+  font-size: 40px;
+  padding:0px;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+}
+.proposition {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+  margin: 30px;
+}
+<% end %>
+      </section>
+
+      <section class="readme-section">
+        <h2 class="readme-header">4. Make it great!</h2>
+        <ul>
+          <li>It's only 1 page... you must make it perfect.</li>
+          <li>Want to make new pages in this app? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/framework/config.html">Refer to this documentation</a> about the <code>app.json</code> file, used to globally configure the WeChat Mini Program</li>
+          <li>Next, how about using your button to navigate to a subpage? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/component/navigator.html">Refer to this documentation</a> to make a component WeChat calls a <code>navigator</code></li>
+        </ul>
+      </section>
+
+      <section class="readme-section">
+        <h2 class="readme-header">We need your feedbacks!</h2>
+        <ul>
+          <li>Our workshops are driven by your comments and suggestions. <br>Space, instructor, content, time... Please tell us what you think!</li>
+            <p class="text-center"><img src="images/feedbacks.png" alt=""></p>
+          <li>Any question about Le Wagon? <a href="mailto:thibault@lewagon.org">get in touch over email</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
