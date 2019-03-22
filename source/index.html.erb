@@ -2,7 +2,7 @@
 title: Le Wagon WeChat development workshop
 ---
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+<div class="banner" style="linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.5) 70%), url('images/background.jpg');">
   <div class="banner-content slideUp">
     <h1>WeChat development <br>crash course</h1>
     <p>Learn how to build a Mini Program with Le Wagon</p>
@@ -13,9 +13,9 @@ title: Le Wagon WeChat development workshop
 
 <div class="container-fluid readme">
   <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <section class="readme-section">
-        <h2 class="readme-header">0. Welcome aboard!</h2>
+        <h2 class="readme-header">Welcome aboard!</h2>
 
         <p class="text-center">
         <img src='images/goal.png'/>
@@ -23,7 +23,7 @@ title: Le Wagon WeChat development workshop
 
       </section>
       <section class="readme-section">
-        <h2 class="readme-header">1. Let's set up</h2>
+        <h2 class="readme-header">1. Let's set up 🛠</h2>
         <ol>
           <li>Open and bookmark the <a href="https://mp.weixin.qq.com/">WeChat Official Accounts Platform</a></li>
           <li>Download the <strong>Integrated Development Environment</strong> (IDE) for WeChat: <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">click here and choose it for Windows or Mac (Linux not available)</a></li>
@@ -51,7 +51,7 @@ title: Le Wagon WeChat development workshop
       </section>
 
       <section class="readme-section">
-        <h2 class="readme-header">2. Add some content and WXML markup</h2>
+        <h2 class="readme-header">2. Add some content with WXML markup 🏗</h2>
         <ul>
           <li>
             To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "img" folder)
@@ -90,47 +90,47 @@ title: Le Wagon WeChat development workshop
       </section>
 
       <section class="readme-section">
-        <h2 class="readme-header">3. CSS for fonts & colors</h2>
+        <h2 class="readme-header">3. Use WXSS for fonts & colors</h2>
         <ul>
-          <li>First, transform your image tag into a background banner</li>
-          <li>Second, add <strong>CSS classes</strong> in your <code>index.wxml</code>. Your code will look like this:
+          <li>First, please transform your image tag into a background image, using a <code>view</code> with a class <code>banner</code></li>
+          <li>Second, create more <strong>classes</strong> for your titles such as <code>headline</code> and <code>action</code>.</li>
+          Your code should look like this:
         </ul>
 
 <% code("html") do %>
 <view class="banner">
-  <view class="title">Get new superpowers</view>
-  <view class="proposition">Learn to code!</view>
+  <view class="headline">Get new superpowers</view>
+  <view class="action">Learn to code!</view>
   <button type="default">Start today</button>
 </view>
 <% end %>
 
 
-        <p>Then copy/paste the CSS code below in <code>index.wxss</code> and <strong>customize it</strong></p>
+        <p>You can copy/paste the CSS code below in <code>index.wxss</code> and <strong>customize it</strong></p>
 
 <% code("css") do %>
 .banner {
   color: white;
   text-align: center;
   height: 100vh;
-  background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-image: url('https://cloud-minapp-13908.cloud.ifanrusercontent.com/1fxsJQzleumTqmCq.jpg');
   background-position: center -30px;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover !important;
   padding:30px;
 }
-.title {
+.headline {
   margin-top: 100px;
   font-size: 40px;
   padding:0px;
   font-weight: bold;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
 }
-.proposition {
+.action {
   font-size: 25px;
   font-weight: bold;
   color: rgb(255, 255, 255);
@@ -144,20 +144,21 @@ title: Le Wagon WeChat development workshop
         <h2 class="readme-header">4. Make it great!</h2>
         <ul>
           <li>It's only 1 page... you must make it perfect.</li>
-          <li>Want to <strong>add new pages</strong> in this app? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/framework/config.html">Refer to this documentation</a> about the <code>app.json</code> file, used to globally configure the WeChat Mini Program</li>
-          <li>Next, how about using your button to navigate to a subpage? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/component/navigator.html">Refer to this documentation</a> to use a component named <code>navigator</code></li>
+          <li>Want to <strong>add new pages</strong> in this app? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/framework/config.html">Read here</a> about the <code>app.json</code> file, used to globally configure your WeChat Mini Program.</li>
+          <li>Next, how about using your button to navigate to a subpage? <a href="https://developers.weixin.qq.com/miniprogram/en/dev/component/navigator.html">Look into this documentation</a> to add a component named <code>navigator</code></li>
         </ul>
       </section>
 
       <section class="readme-section">
         <h2 class="readme-header">We need your feedbacks!</h2>
         <ul>
+          <li>Any question? <a href="mailto:thibault@lewagon.org">get in touch over email</a>
+          </li>
           <li>Our workshops are driven by your comments and suggestions. <br>Space, instructor, content, time... Please tell us what you think!</li>
             <p class="text-center"><img src="images/feedbacks.png" alt="" class="QR"></p>
-          <li>Any question about Le Wagon? <a href="mailto:thibault@lewagon.org">get in touch over email</a>
-          </li>
         </ul>
       </section>
+
     </div>
   </div>
 </div>
