@@ -76,7 +76,7 @@
         <h2 class="readme-header">2. Add some content with WXML markup 🏗</h2>
         <ul>
           <li>
-            To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "img" folder)
+            To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "images" folder)
             <ul class="list-inline features">
               <li><img src="images/kungfupanda.jpg" alt=""></li>
             </ul>
@@ -95,7 +95,7 @@
         </ul>
 
 <div class="highlight"><pre class="highlight html"><code>
-  <span class="nt">&lt;image</span> <span class="na">src=</span><span class="s">"/image/kungfupanda.jpg"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;image</span> <span class="na">src=</span><span class="s">"/images/kungfupanda.jpg"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;text&gt;</span>Get new superpowers<span class="nt">&lt;/text&gt;</span>
   <span class="nt">&lt;text&gt;</span>Learn to code!<span class="nt">&lt;/text&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"default"</span><span class="nt">&gt;</span>Start today<span class="nt">&lt;/button&gt;</span>
@@ -104,7 +104,7 @@
         <ul>
           <li>Use the built-in <strong>auto complete</strong> function to make sure you don't forget any <strong>end tags</strong>.</li>
           <li>Your image <code>src</code> allows to load the file from the current page (index.wxml), you want to start with a slash <code>/</code> to write an absolute path</li>
-          <li>Don't forget to place your images inside a folder, e.g <code>/image</code></li>
+          <li>Don't forget to place your images inside a folder, e.g <code>/images</code></li>
           <li>the <code>text</code> tag is "inline", i.e each tag will be side by side. If you want to break on two or multiple lines, consider using <code>view</code> tags instead</li>
         </ul>
 
@@ -113,7 +113,7 @@
 <p>You probably noticed that your <code>text</code> tags aren't returning content to the next line 😔. No worries! Use the <code>view</code> tag to wrap around your content.</p>
 
 <div class="highlight"><pre class="highlight html"><code>
-  <span class="nt">&lt;image</span> <span class="na">src=</span><span class="s">"/image/kungfupanda.jpg"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;image</span> <span class="na">src=</span><span class="s">"/images/kungfupanda.jpg"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;view&gt;</span>
     <span class="nt">&lt;text&gt;</span>Get new superpowers<span class="nt">&lt;/text&gt;</span>
   <span class="nt">&lt;/view&gt;</span>
@@ -274,7 +274,7 @@
 <div class="highlight"><pre class="highlight javascript"><code><span class="nx">page</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span> <span class="na">markers</span><span class="p">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">stores</span> <span class="p">})</span>
 </code></pre></div>          <h3>Tips</h3>
             <ul>
-              <li>The markers provided in this API call will require your icon to be named <code>marker.png</code> and placed them inside an <code>/image</code> folder 😉</li>
+              <li>The markers provided in this API call will require your icon to be named <code>marker.png</code> and placed them inside an <code>/images</code> folder 😉</li>
               <li>The markers provided will show up in Shanghai ;)</li>
             </ul>
           </ol>
