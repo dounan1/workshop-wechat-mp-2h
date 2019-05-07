@@ -53,7 +53,7 @@ title: Le Wagon WeChat development workshop
         <h2 class="readme-header">2. Add some content with WXML markup 🏗</h2>
         <ul>
           <li>
-            To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "img" folder)
+            To save time, just right-click the following image and save it <strong>inside your WeChat Mini Program code directory</strong> (put this file inside a new "images" folder)
             <ul class="list-inline features">
               <li><img src="images/kungfupanda.jpg" alt=""></li>
             </ul>
@@ -73,7 +73,7 @@ title: Le Wagon WeChat development workshop
 
 <% code("html") do %>
 
-  <image src="/image/kungfupanda.jpg"/>
+  <image src="/images/kungfupanda.jpg"/>
   <text>Get new superpowers</text>
   <text>Learn to code!</text>
   <button type="default">Start today</button>
@@ -83,7 +83,7 @@ title: Le Wagon WeChat development workshop
         <ul>
           <li>Use the built-in <strong>auto complete</strong> function to make sure you don't forget any <strong>end tags</strong>.</li>
           <li>Your image <code>src</code> allows to load the file from the current page (index.wxml), you want to start with a slash <code>/</code> to write an absolute path</li>
-          <li>Don't forget to place your images inside a folder, e.g <code>/image</code></li>
+          <li>Don't forget to place your images inside a folder, e.g <code>/images</code></li>
           <li>the <code>text</code> tag is "inline", i.e each tag will be side by side. If you want to break on two or multiple lines, consider using <code>view</code> tags instead</li>
         </ul>
 
@@ -93,7 +93,7 @@ title: Le Wagon WeChat development workshop
 
 <% code("html") do %>
 
-  <image src="/image/kungfupanda.jpg"/>
+  <image src="/images/kungfupanda.jpg"/>
   <view>
     <text>Get new superpowers</text>
   </view>
@@ -217,7 +217,7 @@ data: {
 
 <% code("javascript") do %>
 markers: [{
-  iconPath: "/image/marker.png",
+  iconPath: "/images/marker.png",
   id: 0,
   latitude: 31.232711,
   longitude: 121.47575499999994,
@@ -277,7 +277,7 @@ page.setData({ markers: res.data.stores })
 <% end %>
           <h3>Tips</h3>
             <ul>
-              <li>The markers provided in this API call will require your icon to be named <code>marker.png</code> and placed them inside an <code>/image</code> folder 😉</li>
+              <li>The markers provided in this API call will require your icon to be named <code>marker.png</code> and placed them inside an <code>/images</code> folder 😉</li>
               <li>The markers provided will show up in Shanghai ;)</li>
             </ul>
           </ol>
