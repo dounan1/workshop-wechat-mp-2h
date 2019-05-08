@@ -12,15 +12,17 @@
 }
 
 // Backgrounds
-.bg-text {
-  background: #4a4a4a;
+.highlighted-red {
+    color: #FD1015;
+    background: #FFE0E1;
 }
-.bg-email {
-  background: #aeaeae;
+.highlighted {
+    padding: 0 15px 3px;
+    font-style: normal;
+    font-family: "CircularStd-Black";
+    border-radius: 3px;
 }
-.bg-twitter {
-  background: #00a3e1;
-}
-.bg-facebook {
-  background: #3b5998;
+
+.justify-content-center {
+    justify-content: center !important;
 }

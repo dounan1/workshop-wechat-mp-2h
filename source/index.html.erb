@@ -1,15 +1,26 @@
 ---
-title: Le Wagon WeChat development workshop
+title: Le Wagon | WeChat Mini Program development workshop
 ---
 
-<div class="banner" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.5) 70%), url('images/background.jpg');">
-  <div class="banner-content slideUp">
-    <h1>WeChat development <br>crash course</h1>
-    <p>Learn how to build a Mini Program with Le Wagon.</p>
-    <p class="tossing"><img src="images/QRCodeLeWagon.gif" width="150" height="150" /></p>
-    <p><small>Follow us for more courses</small></p>
+<section class="bg-white home-banner">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <img class="logo-home" src="images/logo.png">
+        <h1 class="font-weight-light"><i class="highlighted highlighted-red">WeChat</i> development <br>crash course</h1>
+        <p>Learn how to build a WeChat Mini Program from scratch with <a href="https://www.lewagon.com/" target="_blank">Le Wagon</a>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <p class="tossing"><img src="images/QRCodeLeWagon.gif" width="150" height="150" /></p>
+        <p><small>Follow us for more courses</small></p>
+      </div>
+    </div>
   </div>
-</div>
+  <img class="home-scenary" src="images/home-scenary.svg">
+  <img class="home-sky" src="images/clouds.svg">
+</section>
 
 <div class="container-fluid readme">
   <div class="row">
@@ -68,17 +79,22 @@ title: Le Wagon WeChat development workshop
 
           </li>
           <li>Have a little doubt here? no worries, always refer to the <a href="https://developers.weixin.qq.com/miniprogram/en/dev/component/index.html?t=18090718">Official Documentation!</a></li>
-          <li>Your code will look like this:</li>
         </ul>
 
-<% code("html") do %>
+        <a class="btn-treehouse drop" data-toggle="collapse" data-target="#html" aria-expanded="false" aria-controls="html">⚠️ Click here to reveal the solution</a>
 
-  <image src="/images/kungfupanda.jpg"/>
-  <text>Get new superpowers</text>
-  <text>Learn to code!</text>
-  <button type="default">Start today</button>
+        <div class="collapse" id="html">
+        <% code("html") do %>
 
-<% end %>
+        <image src="/images/kungfupanda.jpg"/>
+        <text>Get new superpowers</text>
+        <text>Learn to code!</text>
+        <button type="default">Start today</button>
+
+        <% end %>
+        </div>
+
+        <hr>
         <h3>Tips</h3>
         <ul>
           <li>Use the built-in <strong>auto complete</strong> function to make sure you don't forget any <strong>end tags</strong>.</li>
@@ -112,16 +128,21 @@ title: Le Wagon WeChat development workshop
         <ul>
           <li>First, please transform your image tag into a background image, using a <code>view</code> with a CSS class <code>banner</code></li>
           <li>Second, add more CSS classes for your titles such as <code>headline</code> and <code>action</code>.</li>
-          Your code should look like this:
         </ul>
 
-<% code("html") do %>
-<view class="banner">
-  <view class="headline">Get new superpowers</view>
-  <view class="action">Learn to code!</view>
-  <button type="default">Start today</button>
-</view>
-<% end %>
+          <p>
+          <a class="btn-treehouse drop" data-toggle="collapse" data-target="#classes" aria-expanded="false" aria-controls="classes">⚠️ Click here to reveal the solution</a></p>
+
+          <div class="collapse" id="classes">
+          <% code("html") do %>
+          <view class="banner">
+            <view class="headline">Get new superpowers</view>
+            <view class="action">Learn to code!</view>
+            <button type="default">Start today</button>
+          </view>
+          <% end %>
+          </div>
+          <hr>
 
 
         <p>You can copy/paste the CSS code below in <code>index.wxss</code> and <strong>customize it</strong></p>
