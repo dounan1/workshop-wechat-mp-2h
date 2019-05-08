@@ -2,10 +2,10 @@
 
 ### WXML & WXSS workshop
 
-`Update: March 28, 2019`
+`Update: May 8, 2019`
 
 1. [Browse tutorial](http://workshop.wechatdevelopers.com/)
-2. **Build your own!**
+2. **Now build your own!**
 3. [Contact us](mailto:thibault@lewagon.org)
 4. Join our next courses... more details in WeChat:
 
