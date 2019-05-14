@@ -9843,9 +9843,10 @@ footer a {
   border-radius: 4px;
   font-weight: bold;
   background: #6AD58B;
-  transition: background 0.3s ease; }
+  transition: background 0.3s ease;
+  cursor: pointer; }
 
-/* line 23, /Users/thibaultgenaitay/code/tgenaitay/workshop-wechat-mp-2h/source/stylesheets/components/_button.scss */
+/* line 24, /Users/thibaultgenaitay/code/tgenaitay/workshop-wechat-mp-2h/source/stylesheets/components/_button.scss */
 .btn-treehouse:hover {
   opacity: 1;
   background: #3ac162;
